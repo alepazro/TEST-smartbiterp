@@ -1,0 +1,87 @@
+﻿@{
+    ViewData["Title"] = "Tipos de Gasto";
+}
+
+<h2>Tipos de Gasto</h2>
+
+<div id="gridContainer"></div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $("#gridContainer").dxDataGrid({
+                dataSource: new DevExpress.data.CustomStore({
+                    key: "id",
+                    load: function () {
+                        return $.getJSON("https://localhost:44305/api/TipoGasto");
+                    },
+                    insert: function (values) {
+                        values.presupuestos = [];
+                        values.detallesGastos = [];
+
+                        return $.ajax({
+                            url: "https://localhost:44305/api/TipoGasto",
+                            method: "POST",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    update: function (key, values) {
+                        values.id = key;
+
+                        values.presupuestos = values.presupuestos || [];
+                        values.detallesGastos = values.detallesGastos || [];
+
+                        return $.ajax({
+                            url: "https://localhost:44305/api/TipoGasto/" + key,
+                            method: "PUT",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    remove: function (key) {
+                        return $.ajax({
+                            url: "https://localhost:44305/api/TipoGasto/" + key,
+                            method: "DELETE"
+                        });
+                    }
+                }),
+                columns: [
+                    { dataField: "id", caption: "ID", allowEditing: false, width: 60 },
+                    { dataField: "descripcion", caption: "Descripción", validationRules: [{ type: "required" }] }
+                ],
+                editing: {
+                    mode: "form",
+                    allowAdding: true,
+                    allowUpdating: true,
+                    allowDeleting: true,
+                    useIcons: true
+                },
+                onRowUpdating: function (e) {
+                    e.newData = { ...e.oldData, ...e.newData };
+
+                    // Asegurar que las listas existan si la API las requiere
+                    e.newData.presupuestos = e.oldData.presupuestos || [];
+                    e.newData.detallesGastos = e.oldData.detallesGastos || [];
+                },
+                showBorders: true,
+                searchPanel: {
+                    visible: true,
+                    width: 240,
+                    placeholder: "Buscar..."
+                },
+                filterRow: {
+                    visible: true
+                },
+                paging: {
+                    pageSize: 10
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [5, 10, 20],
+                    showInfo: true
+                }
+            });
+        });
+    </script>
+}

@@ -1,0 +1,11 @@
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\bin\Debug\net8.0\FinanzasPersonales.Core.deps.json
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\bin\Debug\net8.0\FinanzasPersonales.Core.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\bin\Debug\net8.0\FinanzasPersonales.Core.pdb
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.AssemblyInfoInputs.cache
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.AssemblyInfo.cs
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.csproj.CoreCompileInputs.cache
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\refint\FinanzasPersonales.Core.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\FinanzasPersonales.Core.pdb
+C:\Users\dapr1\source\repos\FinanzasPersonales.Core\obj\Debug\net8.0\ref\FinanzasPersonales.Core.dll

@@ -1,0 +1,141 @@
+﻿@{
+    ViewData["Title"] = "Usuarios";
+}
+
+<h2>Lista de Usuarios</h2>
+
+<div id="gridContainer"></div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $("#gridContainer").dxDataGrid({
+                dataSource: new DevExpress.data.CustomStore({
+                    key: "id",
+                    load: function () {
+                        return $.getJSON("https://localhost:44305/api/Usuario");
+                    },
+                    insert: function (values) {
+                        // Inicializamos las listas requeridas
+                        values.presupuestos = [];
+                        values.registrosGastos = [];
+                        values.depositos = [];
+
+                        return $.ajax({
+                            url: "https://localhost:44305/api/Usuario",
+                            method: "POST",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    update: function (key, values) {
+                        values.id = key; // Forzar que se envíe el ID
+
+                        // Asegurar listas vacías si no están presentes
+                        values.presupuestos = values.presupuestos || [];
+                        values.registrosGastos = values.registrosGastos || [];
+                        values.depositos = values.depositos || [];
+
+                        return $.ajax({
+                            url: "https://localhost:44305/api/Usuario/" + key,
+                            method: "PUT",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    remove: function (key) {
+                        return $.ajax({
+                            url: "https://localhost:44305/api/Usuario/" + key,
+                            method: "DELETE"
+                        });
+                    }
+                }),
+                columns: [
+                    { dataField: "id", caption: "ID", allowEditing: false, width: 50 },
+                    { dataField: "identificacion", caption: "Identificación", validationRules: [{ type: "required" }] },
+                    { dataField: "nombre", caption: "Nombre", validationRules: [{ type: "required" }] },
+                    { dataField: "apellido", caption: "Apellido", validationRules: [{ type: "required" }] },
+                    { dataField: "login", caption: "Login", validationRules: [{ type: "required" }] },
+                    { dataField: "password", caption: "Contraseña", editorType: "dxTextBox", editorOptions: { mode: "password" } },
+                    { dataField: "fechaNacimiento", caption: "Fecha de Nacimiento", dataType: "date", format: "dd/MM/yyyy" },
+                    { dataField: "direccion", caption: "Dirección" },
+                    { dataField: "correo", caption: "Correo", validationRules: [{ type: "email" }] },
+                    { dataField: "telefono", caption: "Teléfono" },
+
+                    // Columna de acciones con editar, eliminar y los nuevos iconos de presupuesto, gastos y depósitos
+                    {
+                        dataField: "acciones",
+                        caption: "Acciones",
+                        width: 200,
+                        cellTemplate: function (container, options) {                            
+
+                            // Botón Presupuesto (icono de DevExpress)
+                            $("<div>").dxButton({
+                                icon: "card", // Icono de "presupuesto" (DevExpress)
+                                hint: "Presupuesto", // Tooltip que aparecerá al pasar el mouse
+                                onClick: function () {
+                                    const usuarioId = options.data.id;
+                                    const mes = 5; // Mes fijo para el presupuesto
+
+                                    // Redirigir a la vista de presupuesto con el usuarioId y mes como parámetros
+                                    window.location.href = `/Presupuesto/Index?usuarioId=${usuarioId}&mes=${mes}`;
+                                }
+                            }).appendTo(container);
+
+                            // Botón Gastos (icono de DevExpress)
+                            $("<div>").dxButton({
+                                icon: "money", // Icono de "gastos" (DevExpress)
+                                hint: "Gastos", // Tooltip que aparecerá al pasar el mouse
+                                onClick: function () {
+                                    alert("Ver/Editar Registro de Gastos de " + options.data.nombre);
+                                }
+                            }).appendTo(container);
+
+                           // Botón Depositos (icono de DevExpress)
+                            $("<div>").dxButton({
+                                icon: "fa fa-piggy-bank", // Icono de "gastos" (DevExpress)
+                                hint: "Depositos", // Tooltip que aparecerá al pasar el mouse
+                                onClick: function () {
+                                    alert("Ver/Presupuesto Registro de Gastos de " + options.data.nombre);
+                                }
+                            }).appendTo(container);
+                        }
+                    }
+                ],
+                editing: {
+                    mode: "form", // Cambiar a "form" para una edición más estructurada
+                    allowAdding: true,
+                    allowUpdating: true,
+                    allowDeleting: true,
+                    useIcons: true
+                },
+                onRowUpdating: function (e) {
+                    // Combina el objeto original con los nuevos cambios para evitar enviar un DTO incompleto
+                    e.newData = { ...e.oldData, ...e.newData };
+
+                    // Asegurar que las listas estén definidas (si tu API las espera aunque vacías)
+                    e.newData.presupuestos = e.oldData.presupuestos || [];
+                    e.newData.registrosGastos = e.oldData.registrosGastos || [];
+                    e.newData.depositos = e.oldData.depositos || [];
+                },
+                searchPanel: {
+                    visible: true,
+                    width: 240,
+                    placeholder: "Buscar..."
+                },
+                filterRow: {
+                    visible: true
+                },
+                showBorders: true,
+                paging: {
+                    pageSize: 10
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [5, 10, 20],
+                    showInfo: true
+                }
+            });
+        });
+    </script>
+}

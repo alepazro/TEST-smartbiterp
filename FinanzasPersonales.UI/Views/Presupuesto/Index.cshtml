@@ -1,0 +1,111 @@
+﻿@{
+    ViewData["Title"] = "Presupuestos";
+}
+
+<h2>Lista de Presupuestos</h2>
+
+<div id="gridContainer"></div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            // Obtener los parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const usuarioId = urlParams.get('usuarioId'); // Recuperar usuarioId
+            const mes = urlParams.get('mes'); // Recuperar mes
+
+            if (!usuarioId || !mes) {
+                alert("Faltan parámetros en la URL.");
+                return;
+            }
+
+            // Definir el DataGrid de DevExtreme
+            $("#gridContainer").dxDataGrid({
+                dataSource: new DevExpress.data.CustomStore({
+                    key: "id",
+                    load: function () {
+                        // Aquí se usa la URL con los parámetros recuperados
+                        return $.getJSON(`https://localhost:44305/api/Presupuesto/${usuarioId}/${mes}`); // API para obtener presupuestos por usuarioId y mes
+                    },
+                    insert: function (values) {
+                        values.usuarioId = usuarioId; // Asocia al usuarioId
+                        values.mes = mes; // Asocia al mes
+
+                        return $.ajax({
+                            url: "https://localhost:44305/api/Presupuesto",
+                            method: "POST",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    update: function (key, values) {
+                        values.id = key; // Asegura que el ID se pase correctamente
+
+                        return $.ajax({
+                            url: `https://localhost:44305/api/Presupuesto`,
+                            method: "PUT",
+                            contentType: "application/json",
+                            data: JSON.stringify(values)
+                        });
+                    },
+                    remove: function (key) {
+                        return $.ajax({
+                            url: `https://localhost:44305/api/Presupuesto/${key}`,
+                            method: "DELETE"
+                        });
+                    }
+                }),
+                columns: [
+                    { dataField: "id", caption: "ID", allowEditing: false, width: 50 },
+                    { dataField: "mes", caption: "Mes", width: 100 },
+                    { dataField: "monto", caption: "Monto", format: "currency" },
+                    {
+                        dataField: "usuario.nombre",
+                        caption: "Nombre del Usuario",
+                        calculateDisplayValue: function (data) {
+                            return data.usuario ? data.usuario.nombre : '';
+                        }
+                    },
+                    {
+                        dataField: "usuario.apellido",
+                        caption: "Apellido del Usuario",
+                        calculateDisplayValue: function (data) {
+                            return data.usuario ? data.usuario.apellido : '';
+                        }
+                    },
+                    {
+                        dataField: "tipoGasto.descripcion",
+                        caption: "Tipo de Gasto",
+                        calculateDisplayValue: function (data) {
+                            return data.tipoGasto ? data.tipoGasto.descripcion : '';
+                        }
+                    }                    
+                ],
+                editing: {
+                    mode: "form", // Modo de edición en formulario
+                    allowAdding: true,
+                    allowUpdating: true,
+                    allowDeleting: true,
+                    useIcons: true
+                },
+                searchPanel: {
+                    visible: true,
+                    width: 240,
+                    placeholder: "Buscar..."
+                },
+                filterRow: {
+                    visible: true
+                },
+                showBorders: true,
+                paging: {
+                    pageSize: 10
+                },
+                pager: {
+                    showPageSizeSelector: true,
+                    allowedPageSizes: [5, 10, 20],
+                    showInfo: true
+                }
+            });
+        });
+    </script>
+}

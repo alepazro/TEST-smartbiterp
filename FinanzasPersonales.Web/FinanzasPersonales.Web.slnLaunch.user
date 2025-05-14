@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Nuevo perfil",
+    "Projects": [
+      {
+        "Path": "FinanzasPersonales.Web.Api.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

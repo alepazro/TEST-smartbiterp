@@ -1,0 +1,26 @@
+﻿@{
+    ViewData["Title"] = "Usuarios (API)";
+}
+
+<h2>Usuarios</h2>
+
+<div id="usuariosGrid"></div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            $("#usuariosGrid").dxDataGrid({
+                dataSource: "/api/Usuario", // Cambia a tu ruta real si es diferente
+                columns: [
+                    { dataField: "id", caption: "id" },
+                    { dataField: "nombre", caption: "nombre" },
+                    { dataField: "correo", caption: "correo" }
+                ],
+                paging: { pageSize: 10 },
+                filterRow: { visible: true },
+                searchPanel: { visible: true },
+                showBorders: true
+            });
+        });
+    </script>
+}

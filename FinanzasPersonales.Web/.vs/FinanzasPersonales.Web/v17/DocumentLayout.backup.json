@@ -1,0 +1,392 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\presupuesto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\usuarios\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.web\\controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|solutionrelative:controllers\\presupuestocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6BA7B87-A22B-445D-BFED-8E5A76F0ECC1}|..\\FinanzasPersonales.Application\\FinanzasPersonales.Application.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.application\\dtos\\tipogastodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7999BD9-9596-4D1B-9891-AAED3D5D0828}|..\\FinanzasPersonales.Core\\FinanzasPersonales.Core.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.core\\entities\\tipogasto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7999BD9-9596-4D1B-9891-AAED3D5D0828}|..\\FinanzasPersonales.Core\\FinanzasPersonales.Core.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.core\\entities\\presupuesto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8C1796-E8C5-4854-8EEC-1BD5BDFC4E8D}|..\\FinanzasPersonales.Infrastructure\\FinanzasPersonales.Infrastructure.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.infrastructure\\repositories\\presupuestorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6BA7B87-A22B-445D-BFED-8E5A76F0ECC1}|..\\FinanzasPersonales.Application\\FinanzasPersonales.Application.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.application\\dtos\\presupuestodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6BA7B87-A22B-445D-BFED-8E5A76F0ECC1}|..\\FinanzasPersonales.Application\\FinanzasPersonales.Application.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.application\\dtos\\usuariodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7999BD9-9596-4D1B-9891-AAED3D5D0828}|..\\FinanzasPersonales.Core\\FinanzasPersonales.Core.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.core\\entities\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8C1796-E8C5-4854-8EEC-1BD5BDFC4E8D}|..\\FinanzasPersonales.Infrastructure\\FinanzasPersonales.Infrastructure.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.infrastructure\\repositories\\usuariorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6BA7B87-A22B-445D-BFED-8E5A76F0ECC1}|..\\FinanzasPersonales.Application\\FinanzasPersonales.Application.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.application\\services\\presupuestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E6BA7B87-A22B-445D-BFED-8E5A76F0ECC1}|..\\FinanzasPersonales.Application\\FinanzasPersonales.Application.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.application\\interfaces\\ipresupuestoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\tipogasto\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{98E529A8-378A-44FC-8978-2B1806C34B3A}|..\\FinanzasPersonales.UI\\FinanzasPersonales.UI.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.ui\\views\\fondomonetario\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.web\\controllers\\fondomonetariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|solutionrelative:controllers\\fondomonetariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.web\\controllers\\tipogastocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|solutionrelative:controllers\\tipogastocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.web\\controllers\\depositocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F79B8919-72E5-4C54-BA7B-8C3B103212E7}|FinanzasPersonales.Web.Api.csproj|solutionrelative:controllers\\depositocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C8C1796-E8C5-4854-8EEC-1BD5BDFC4E8D}|..\\FinanzasPersonales.Infrastructure\\FinanzasPersonales.Infrastructure.csproj|c:\\users\\dapr1\\source\\repos\\finanzaspersonales.infrastructure\\repositories\\depositorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T21:53:27.681Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAA1wAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:53:19.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IPresupuestoService.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\Interfaces\\IPresupuestoService.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Application\\Interfaces\\IPresupuestoService.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\Interfaces\\IPresupuestoService.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Application\\Interfaces\\IPresupuestoService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:06:36.802Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "PresupuestoService.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\Services\\PresupuestoService.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Application\\Services\\PresupuestoService.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\Services\\PresupuestoService.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Application\\Services\\PresupuestoService.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAcwBgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:06:27.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "PresupuestoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\PresupuestoRepository.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Infrastructure\\Repositories\\PresupuestoRepository.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\PresupuestoRepository.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Infrastructure\\Repositories\\PresupuestoRepository.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAcwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T20:59:53.953Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Presupuesto\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\Presupuesto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Presupuesto\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\Presupuesto\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowFEAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T20:35:42.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "PresupuestoController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Controllers\\PresupuestoController.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Controllers\\PresupuestoController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Controllers\\PresupuestoController.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Controllers\\PresupuestoController.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T20:34:52.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PresupuestoController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\PresupuestoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PresupuestoController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\PresupuestoController.cs",
+              "RelativeToolTip": "Controllers\\PresupuestoController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:37:10.8Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Usuarios\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\Usuarios\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Usuarios\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\Usuarios\\Index.cshtml",
+              "ViewState": "AgIAAEEAAAAAAAAAAAAowFIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T18:48:33.434Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABMAAAAAAAAAAAAmwCkAAABeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T18:44:25.762Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoGastoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\TipoGastoDTO.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Application\\DTOs\\TipoGastoDTO.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\TipoGastoDTO.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Application\\DTOs\\TipoGastoDTO.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:15:44.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PresupuestoDTO.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\PresupuestoDTO.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Application\\DTOs\\PresupuestoDTO.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\PresupuestoDTO.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Application\\DTOs\\PresupuestoDTO.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:14:22.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TipoGasto.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\TipoGasto.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Core\\Entities\\TipoGasto.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\TipoGasto.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Core\\Entities\\TipoGasto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:15:27.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Presupuesto.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\Presupuesto.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Core\\Entities\\Presupuesto.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\Presupuesto.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Core\\Entities\\Presupuesto.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:02:15.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "UsuarioDTO.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\UsuarioDTO.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Application\\DTOs\\UsuarioDTO.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Application\\DTOs\\UsuarioDTO.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Application\\DTOs\\UsuarioDTO.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABEAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:12:19.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\Usuario.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Core\\Entities\\Usuario.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Core\\Entities\\Usuario.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Core\\Entities\\Usuario.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwBUAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:10:01.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UsuarioRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Infrastructure\\Repositories\\UsuarioRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T21:11:38.903Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "FondoMonetarioController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\FondoMonetarioController.cs",
+              "RelativeDocumentMoniker": "Controllers\\FondoMonetarioController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\FondoMonetarioController.cs",
+              "RelativeToolTip": "Controllers\\FondoMonetarioController.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAwwCMAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:37:42.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DepositoController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\DepositoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DepositoController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\DepositoController.cs",
+              "RelativeToolTip": "Controllers\\DepositoController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:32:07.795Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\TipoGasto\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\TipoGasto\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\TipoGasto\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\TipoGasto\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T17:55:13.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DepositoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\DepositoRepository.cs",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.Infrastructure\\Repositories\\DepositoRepository.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Infrastructure\\Repositories\\DepositoRepository.cs",
+              "RelativeToolTip": "..\\FinanzasPersonales.Infrastructure\\Repositories\\DepositoRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T18:32:00.89Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "TipoGastoController.cs",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\TipoGastoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TipoGastoController.cs",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.Web\\Controllers\\TipoGastoController.cs",
+              "RelativeToolTip": "Controllers\\TipoGastoController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T17:53:50.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\FondoMonetario\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\FinanzasPersonales.UI\\Views\\FondoMonetario\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dapr1\\source\\repos\\FinanzasPersonales.UI\\Views\\FondoMonetario\\Index.cshtml",
+              "RelativeToolTip": "..\\FinanzasPersonales.UI\\Views\\FondoMonetario\\Index.cshtml",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAmwI4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T18:51:25.457Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

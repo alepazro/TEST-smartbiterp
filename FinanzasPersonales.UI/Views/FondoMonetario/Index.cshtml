@@ -1,0 +1,142 @@
+﻿@{
+    ViewData["Title"] = "Fondos Monetarios";
+}
+
+<h2>Lista de Fondos Monetarios</h2>
+
+<div id="gridContainer"></div>
+
+@section Scripts {
+    <script>
+        $(function () {
+            // Variable global para almacenar los tipos de gasto
+            var tipoGastoData = [];
+
+            // Cargar los tipos de gasto desde la API
+            $.ajax({
+                url: "https://localhost:44305/api/TipoGasto",  // Endpoint que devuelve los tipos de gasto
+                method: "GET",
+                success: function (data) {
+                    tipoGastoData = data;  // Almacenamos la respuesta en la variable tipoGastoData
+                    console.log(tipoGastoData);  // Depurar los datos recibidos
+                    initializeDataGrid();  // Inicializamos la grilla después de cargar los tipos
+                },
+                error: function (err) {
+                    console.log("Error al obtener los tipos de gasto:", err);
+                }
+            });
+
+            // Función para inicializar la grilla después de cargar los tipos de gasto
+            function initializeDataGrid() {
+                $("#gridContainer").dxDataGrid({
+                    dataSource: new DevExpress.data.CustomStore({
+                        key: "id",  // El ID será la clave primaria de cada fondo
+                        load: function () {
+                            // Realizamos la petición GET a la API para obtener todos los fondos monetarios
+                            return $.getJSON("https://localhost:44305/api/FondoMonetario"); // Asegúrate de que esta URL sea correcta
+                        },
+                        insert: function (values) {
+                            // Inicializamos las colecciones requeridas si están vacías
+                            values.registrosGastos = values.registrosGastos || [];
+                            values.depositos = values.depositos || [];
+
+                            // Realizamos la petición POST para agregar un nuevo fondo monetario
+                            return $.ajax({
+                                url: "https://localhost:44305/api/FondoMonetario", // Asegúrate de que esta URL sea correcta
+                                method: "POST",
+                                contentType: "application/json",
+                                data: JSON.stringify(values)
+                            });
+                        },
+                        update: function (key, values) {
+                            // Incluimos el ID en el cuerpo de la solicitud
+                            values.id = key;
+
+                            // Asegura que las colecciones estén definidas (vacías si no existen)
+                            values.registrosGastos = values.registrosGastos || [];
+                            values.depositos = values.depositos || [];
+
+                            return $.ajax({
+                                url: "https://localhost:44305/api/FondoMonetario", // Solo el endpoint sin el ID en la URL
+                                method: "PUT",
+                                contentType: "application/json",
+                                data: JSON.stringify(values)  // Enviamos el objeto completo, incluyendo el ID
+                            });
+                        },
+                        remove: function (key) {
+                            return $.ajax({
+                                url: "https://localhost:44305/api/FondoMonetario/" + key, // Asegúrate de que esta URL sea correcta
+                                method: "DELETE"
+                            });
+                        }
+                    }),
+                    columns: [
+                        { dataField: "id", caption: "ID", allowEditing: false, width: 50 },
+                        { dataField: "nombre", caption: "Nombre", validationRules: [{ type: "required" }] },
+                        {
+                            dataField: "tipo",
+                            caption: "Tipo",
+                            editorType: "dxSelectBox",
+                            validationRules: [{ type: "required" }],
+                            editorOptions: {
+                                dataSource: tipoGastoData,  // Usamos los datos de la API para llenar el SelectBox
+                                valueField: "id",  // El valor que se enviará (ID del tipo de gasto)
+                                displayField: "descripcion",  // La descripción será lo que se muestre en el dropdown
+                                searchEnabled: true,  // Habilita la búsqueda dentro del dropdown
+                                placeholder: "Seleccione un tipo",
+                                valueExpr: "id", // Especificamos que el valor es el 'id'
+                                displayExpr: "descripcion" // Especificamos que la etiqueta a mostrar es la 'descripcion'
+                            }
+                        },
+                        {
+                            dataField: "registrosGastos",
+                            caption: "Registros de Gastos",
+                            cellTemplate: function (container, options) {
+                                container.text(options.value.length); // Mostrar la cantidad de registros de gasto
+                            }
+                        },
+                        {
+                            dataField: "depositos",
+                            caption: "Depósitos",
+                            cellTemplate: function (container, options) {
+                                container.text(options.value.length); // Mostrar la cantidad de depósitos
+                            }
+                        }
+                    ],
+                    editing: {
+                        mode: "form", // Puedes cambiarlo a "popup" o "row" si prefieres otro modo
+                        allowAdding: true,
+                        allowUpdating: true,
+                        allowDeleting: true,
+                        useIcons: true
+                    },
+                    onRowUpdating: function (e) {
+                        // Combina los datos originales con los nuevos cambios para evitar perder información
+                        e.newData = { ...e.oldData, ...e.newData };
+
+                        // Asegura que las colecciones estén definidas (si la API las espera aunque vacías)
+                        e.newData.registrosGastos = e.oldData.registrosGastos || [];
+                        e.newData.depositos = e.oldData.depositos || [];
+                    },
+                    searchPanel: {
+                        visible: true,
+                        width: 240,
+                        placeholder: "Buscar..."
+                    },
+                    filterRow: {
+                        visible: true
+                    },
+                    showBorders: true,
+                    paging: {
+                        pageSize: 10
+                    },
+                    pager: {
+                        showPageSizeSelector: true,
+                        allowedPageSizes: [5, 10, 20],
+                        showInfo: true
+                    }
+                });
+            }
+        });
+    </script>
+}

@@ -1,0 +1,80 @@
+INSERT INTO Usuarios (Identificacion, Nombre, Apellido, Login, Password, FechaNacimiento, Direccion, Correo, Telefono)
+VALUES
+('123456789', 'Juan', 'Pérez', 'juan.perez', 'Password1234', '1990-03-15', 'Calle Falsa 123, Ciudad X', 'juan.perez@example.com', '3001234567'),
+('987654321', 'Ana', 'Gómez', 'ana.gomez', 'Password1234', '1985-06-25', 'Avenida Siempre Viva 456, Ciudad Y', 'ana.gomez@example.com', '3007654321'),
+('555555555', 'Carlos', 'Lopez', 'carlos.lopez', 'Password1234', '1992-07-10', 'Carrera 10, Bogotá', 'carlos.lopez@example.com', '3101234567'),
+('666666666', 'Laura', 'Martínez', 'laura.martinez', 'Password1234', '1988-02-20', 'Calle 22, Medellín', 'laura.martinez@example.com', '3201234567');
+
+INSERT INTO TiposGasto (Descripcion)
+VALUES
+('Alimentos'),
+('Transporte'),
+('Vivienda'),
+('Salud'),
+('Entretenimiento'),
+('Educación'),
+('Deudas'),
+('Ahorros'),
+('Ropa'),
+('Otros');
+
+INSERT INTO FondosMonetarios (Nombre, Tipo)
+VALUES
+('Fondo de Emergencias', 'Ahorro'),
+('Fondo de Viaje', 'Ahorro'),
+('Fondo de Inversión', 'Inversión'),
+('Fondo de Retiro', 'Ahorro'),
+('Fondo de Educación', 'Ahorro');
+
+INSERT INTO RegistrosGastos (Fecha, FondoMonetarioId, Observaciones, NombreComercio, TipoDocumento, UsuarioId)
+VALUES
+('2025-05-01', 1, 'Compra de alimentos', 'Supermercado A', 'Factura', 1),
+('2025-05-02', 1, 'Transporte en taxi', 'Uber', 'Recibo', 2),
+('2025-05-03', 2, 'Pago mensual renta', 'Inmobiliaria XYZ', 'Factura', 3),
+('2025-05-04', 3, 'Consulta médica', 'Clínica Salud Total', 'Recibo', 1),
+('2025-05-05', 1, 'Cena en restaurante', 'Restaurante El Buen Sabor', 'Factura', 2),
+('2025-05-06', 4, 'Compra de materiales escolares', 'Librería ABC', 'Factura', 3);
+
+INSERT INTO Presupuestos (UsuarioId, TipoGastoId, Mes, Monto)
+VALUES
+(1, 1, 5, 3000.00),
+(2, 2, 5, 1500.50),
+(3, 3, 5, 2500.00),
+(1, 2, 6, 2200.75),
+(2, 1, 6, 1800.20),
+(3, 3, 6, 1900.00);
+
+
+
+-- Inserta detalles de gasto
+INSERT INTO DetallesGastos (RegistroGastoId, TipoGastoId, Monto)
+VALUES
+(1, 1, 150.00),  -- Gasto con RegistroGastoId 1, TipoGastoId 1, y monto 150
+(1, 2, 50.00),   -- Gasto con RegistroGastoId 1, TipoGastoId 2, y monto 50
+(2, 1, 200.00),  -- Gasto con RegistroGastoId 2, TipoGastoId 1, y monto 200
+(2, 3, 75.00),   -- Gasto con RegistroGastoId 2, TipoGastoId 3, y monto 75
+(3, 2, 300.00);  -- Gasto con RegistroGastoId 3, TipoGastoId 2, y monto 300
+
+-- Inserta depósitos
+INSERT INTO Depositos (Fecha, FondoMonetarioId, Monto, UsuarioId)
+VALUES
+('2025-05-01', 1, 1000.00, 1),  -- Depósito en FondoMonetarioId 1, por UsuarioId 1, monto 1000
+('2025-05-10', 2, 500.50, 2),   -- Depósito en FondoMonetarioId 2, por UsuarioId 2, monto 500.50
+('2025-06-15', 1, 750.00, 1),   -- Depósito en FondoMonetarioId 1, por UsuarioId 1, monto 750
+('2025-07-20', 3, 2000.00, 3),  -- Depósito en FondoMonetarioId 3, por UsuarioId 3, monto 2000
+('2025-08-05', 2, 1200.00, 2);  -- Depósito en FondoMonetarioId 2, por UsuarioId 2, monto 1200
+
+
+/*
+
+select * from Usuarios;
+select * from TiposGasto;
+select * from FondosMonetarios;
+select * from RegistrosGastos;
+select * from Presupuestos;
+select * from DetallesGastos;
+select * from Depositos;
+
+*/
+
+

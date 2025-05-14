@@ -1,0 +1,77 @@
+Paso 1. 
+levantar el contenedor de docker
+docker-compose up -d
+
+paso2. 
+crear la base de datos  en sql server llamada FinanzasPersonales.Db
+
+paso 3. crear las tablas en la base de datos FinanzasPersonales.Db
+
+CREATE TABLE Usuarios (
+    UsuarioId INT PRIMARY KEY IDENTITY,
+    Identificacion NVARCHAR(20),
+    Nombre NVARCHAR(50),
+    Apellido NVARCHAR(50),
+    Login NVARCHAR(50) UNIQUE,
+    PasswordHash NVARCHAR(MAX),
+    FechaNacimiento DATE,
+    Direccion NVARCHAR(200),
+    Correo NVARCHAR(100),
+    Telefono NVARCHAR(20)
+);
+
+CREATE TABLE TiposGasto (
+    TipoGastoId INT PRIMARY KEY IDENTITY,
+    Codigo NVARCHAR(10) UNIQUE,
+    Nombre NVARCHAR(100)
+);
+
+CREATE TABLE FondosMonetarios (
+    FondoId INT PRIMARY KEY IDENTITY,
+    Nombre NVARCHAR(100),
+    Tipo NVARCHAR(50),
+    UsuarioId INT FOREIGN KEY REFERENCES Usuarios(UsuarioId)
+);
+
+CREATE TABLE Presupuestos (
+    PresupuestoId INT PRIMARY KEY IDENTITY,
+    UsuarioId INT,
+    TipoGastoId INT,
+    Mes INT,
+    Anio INT,
+    Monto DECIMAL(18,2),
+    FOREIGN KEY (UsuarioId) REFERENCES Usuarios(UsuarioId),
+    FOREIGN KEY (TipoGastoId) REFERENCES TiposGasto
+);
+
+CREATE TABLE EncabezadoGastos (
+    EncabezadoId INT PRIMARY KEY IDENTITY,
+    UsuarioId INT,
+    Fecha DATE,
+    FondoId INT,
+    Observaciones NVARCHAR(255),
+    NombreComercio NVARCHAR(100),
+    TipoDocumento NVARCHAR(50),
+    FOREIGN KEY (UsuarioId) REFERENCES Usuarios(UsuarioId),
+    FOREIGN KEY (FondoId) REFERENCES FondosMonetarios(FondoId)
+);
+
+CREATE TABLE DetalleGastos (
+    DetalleId INT PRIMARY KEY IDENTITY,
+    EncabezadoId INT,
+    TipoGastoId INT,
+    Monto DECIMAL(18,2),
+    FOREIGN KEY (EncabezadoId) REFERENCES EncabezadoGastos(EncabezadoId),
+    FOREIGN KEY (TipoGastoId) REFERENCES TiposGasto
+);
+
+CREATE TABLE Depositos (
+    DepositoId INT PRIMARY KEY IDENTITY,
+    UsuarioId INT,
+    Fecha DATE,
+    FondoId INT,
+    Monto DECIMAL(18,2),
+    FOREIGN KEY (UsuarioId) REFERENCES Usuarios(UsuarioId),
+    FOREIGN KEY (FondoId) REFERENCES FondosMonetarios(FondoId)
+);
+

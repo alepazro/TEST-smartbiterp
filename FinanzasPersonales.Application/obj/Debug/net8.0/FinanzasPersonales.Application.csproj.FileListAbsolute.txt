@@ -1,0 +1,15 @@
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\bin\Debug\net8.0\FinanzasPersonales.Application.deps.json
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\bin\Debug\net8.0\FinanzasPersonales.Application.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\bin\Debug\net8.0\FinanzasPersonales.Application.pdb
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\bin\Debug\net8.0\FinanzasPersonales.Core.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\bin\Debug\net8.0\FinanzasPersonales.Core.pdb
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.csproj.AssemblyReference.cache
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.AssemblyInfoInputs.cache
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.AssemblyInfo.cs
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.csproj.CoreCompileInputs.cache
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\Finanzas.9BCB6ADB.Up2Date
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\refint\FinanzasPersonales.Application.dll
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\FinanzasPersonales.Application.pdb
+C:\Users\dapr1\source\repos\FinanzasPersonales.Application\obj\Debug\net8.0\ref\FinanzasPersonales.Application.dll
